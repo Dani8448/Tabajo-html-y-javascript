@@ -1,0 +1,156 @@
+body {
+  background-color: skyblue;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+.titulo-principal {
+  font-size: 50px;
+  font-family: 'Georgia', serif;
+  text-decoration: underline;
+}
+
+.subtitulo {
+  font-size: 40px;
+  font-style: italic;
+  margin-top: -10px;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  margin-top: -30px;
+  width: 400px;
+  height: 400px;
+}
+
+.cancion {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 22px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.descripcion {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 75px;
+  font-family: 'Verdana', sans-serif;
+}
+
+.nav-enlace {
+  font-size: 18px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Tahoma', sans-serif;
+}
+
+.nav-enlace:hover {
+  text-decoration: underline;
+}
+
+.imagen-avion {
+  display: block;
+  margin-right: 325px;
+  margin-top: 200px;
+  width: 600px;
+  height: 1200px;
+  float: right;
+}
+
+.sitios {
+  font-size: 28px;
+  text-decoration: underline;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.lista-sitios {
+  list-style-type: none;
+  padding-left: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.enlace-sitio {
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Lucida Console', Monaco, monospace;
+}
+
+.enlace-sitio:hover {
+  text-decoration: underline;
+}
+
+.destino {
+  margin: 20px 0;
+  font-size: 18px;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.titulo-destino {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: 'Impact', Charcoal, sans-serif;
+}
+
+.imagen-destino {
+  width: 250px;
+  height: 250px;
+}
+
+.volver {
+  font-size: 18px;
+  text-decoration: none;
+  color: red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.volver:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+#destinos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.destino {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.imagen-destino {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.playwrite-pt-guides-regular {
+  font-family: "Playwrite PT Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+

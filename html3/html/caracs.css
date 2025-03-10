@@ -1,0 +1,74 @@
+body {
+    background-color: skyblue;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  header h2 {
+    text-decoration: underline;
+    font-size: 30px;
+  }
+  
+  .imagen-header {
+    display: block;
+    margin: 20px auto 0;
+    width: 500px;
+    height: 500px;
+  }
+  
+  nav p {
+    margin: 10px 0;
+  }
+  
+  .volver {
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .volver:hover {
+    text-decoration: underline;
+  }
+  
+  section form table {
+    margin: 20px auto;
+    border-spacing: 10px;
+  }
+  
+  table td {
+    padding: 5px;
+  }
+  
+  .genero {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
