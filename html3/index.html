@@ -8,6 +8,24 @@
 </head>
 <body>
     <style>
+        /* Estilo del área de doble clic */
+        .area-doble-clic {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 200px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: lightblue;
+        }
+
+        /* Estilo al hacer doble clic */
+        .cambio-color {
+            background-color: lightgreen;
+        }
+    </style>
+    <style>
         /* Estilos para el botón */
         .boton {
             padding: 10px 20px;
@@ -23,6 +41,12 @@
             background-color: #45a049;
         }
     </style>
+     <!-- Área para doble clic -->
+     <div 
+     class="area-doble-clic" 
+     ondblclick="cambiarColorDobleClic(this)">
+     Doble clic aquí
+ </div>
      <button 
      class="boton" 
      onmouseover="cambiarColor(this, true)" 
@@ -114,6 +138,13 @@
             }
         }
     </script>
+    <script>
+        // Función para cambiar el color del área con doble clic
+        function cambiarColorDobleClic(elemento) {
+            elemento.classList.toggle("cambio-color"); // Cambia entre dos colores
+        }
+    </script>
+
 
 </body>
 </html>
