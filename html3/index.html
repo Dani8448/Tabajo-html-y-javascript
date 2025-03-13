@@ -83,7 +83,20 @@
             <a href="#sitios" class="volver">Volver</a>
         </article>
     </section>
+    <script>
+    
+        document.getElementById('fondoVerde').addEventListener('click', function() {
+            document.body.style.backgroundColor = 'green';
+        });
 
+        document.getElementById('fondoAzul').addEventListener('click', function() {
+            document.body.style.backgroundColor = 'blue';
+        });
+
+        document.getElementById('resetFondo').addEventListener('click', function() {
+            document.body.style.backgroundColor = 'skyblue';
+        });
+    </script>
     <footer>
         <p>&copy; 2024 Da² agencia. Todos los derechos reservados.</p>
     </footer>
