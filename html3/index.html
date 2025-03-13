@@ -7,53 +7,23 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <style>
-        /* Estilo del área de doble clic */
-        .area-doble-clic {
-            width: 300px;
-            height: 200px;
-            border: 2px solid #000;
-            text-align: center;
-            line-height: 200px;
-            margin-top: 20px;
-            cursor: pointer;
-            background-color: lightblue;
-        }
+    <h1>Prueba de cambios dinámicos y estructuras repetitivas</h1>
 
-        /* Estilo al hacer doble clic */
-        .cambio-color {
-            background-color: lightgreen;
-        }
-    </style>
-    <style>
-        /* Estilos para el botón */
-        .boton {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
+    <!-- Botones para cambiar el fondo -->
+    <button id="botonAzul" class="botones">Fondo Azul Claro</button>
+    <button id="botonVerde" class="botones">Fondo Verde Claro</button>
+    <button id="botonCoral" class="botones">Fondo Coral Claro</button>
 
-        /* Estilo cuando el cursor pasa sobre el botón */
-        .boton-hover {
-            background-color: #45a049;
-        }
-    </style>
-     <!-- Área para doble clic -->
-     <div 
-     class="area-doble-clic" 
-     ondblclick="cambiarColorDobleClic(this)">
-     Doble clic aquí
- </div>
-     <button 
-     class="boton" 
-     onmouseover="cambiarColor(this, true)" 
-     onmouseout="cambiarColor(this, false)">
-     Pasa el cursor sobre mí
- </button>
+    <!-- Texto que cambia de tamaño y color -->
+    <p id="textoDinamico" class="textos">Haz clic en este texto para cambiar su color y tamaño.</p>
 
+    <!-- Área para mostrar una lista de elementos -->
+    <div class="lista">
+        <h3>Lista de elementos generada dinámicamente:</h3>
+        <ul id="listaGenerada"></ul>
+    </div>
+
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+PT+Guides&display=swap" rel="stylesheet">
@@ -128,23 +98,6 @@
     <footer>
         <p>&copy; 2024 Da² agencia. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        // Función para cambiar el color de fondo del botón
-        function cambiarColor(elemento, esHover) {
-            if (esHover) {
-                elemento.classList.add("boton-hover");
-            } else {
-                elemento.classList.remove("boton-hover");
-            }
-        }
-    </script>
-    <script>
-        // Función para cambiar el color del área con doble clic
-        function cambiarColorDobleClic(elemento) {
-            elemento.classList.toggle("cambio-color"); // Cambia entre dos colores
-        }
-    </script>
-
-
+    <script src="evento.js"></script> <!-- Enlace al archivo de eventos -->
 </body>
 </html>
