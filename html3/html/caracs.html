@@ -81,9 +81,19 @@
         </tr>
         <tr>
           <td colspan="2">
-            <button type="submit">Enviar</button>
+            <button type="submit" onmouseover="cambiarEstilo(true)" 
+            onmouseout="cambiarEstilo(false)">Enviar</button>
             <script src="js/eventos.js"></script>
-
+            <script>
+              function cambiarEstilo(isHovered) {
+                  var boton = document.getElementById("miBoton");
+                  if (isHovered) {
+                      boton.style.backgroundColor = "#45a049"; // Cambia el color de fondo cuando se pasa el cursor
+                  } else {
+                      boton.style.backgroundColor = "#4CAF50"; // Vuelve al color original cuando se quita el cursor
+                  }
+              }
+          </script>
           </td>
         </tr>
       </table>
