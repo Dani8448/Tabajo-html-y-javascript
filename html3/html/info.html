@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agencia de Viajes Fantástica</title>
+
+    <button id="fondoVerde">Fondo Verde</button>
+    <button id="fondoAzul">Fondo Azul</button>
+    <button id="resetFondo">Restablecer Fondo</button>
 </head>
 <body style="background-color: skyblue; font-size: 20px;">
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          
+            let btnVerde = document.getElementById("fondoVerde");
+            let btnAzul = document.getElementById("fondoAzul");
+            let btnReset = document.getElementById("resetFondo");
+    
+           
+            btnVerde.addEventListener("click", function() {
+                document.body.style.backgroundColor = "green";
+            });
+    
+            btnAzul.addEventListener("click", function() {
+                document.body.style.backgroundColor = "blue";
+            });
+    
+            btnReset.addEventListener("click", function() {
+                document.body.style.backgroundColor = "skyblue"; 
+            });
+        });
+    </script>
+    
     <header>
         <a href="../index.html">Volver</a>
         <h2 style="text-decoration: underline; font-size: 35px;">Bienvenidos a la Agencia de Viajes más MÁGICA</h2>
