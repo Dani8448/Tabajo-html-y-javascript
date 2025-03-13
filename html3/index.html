@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <style>
+        /* Estilos para el botón */
+        .boton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Estilo cuando el cursor pasa sobre el botón */
+        .boton-hover {
+            background-color: #45a049;
+        }
+    </style>
+     <button 
+     class="boton" 
+     onmouseover="cambiarColor(this, true)" 
+     onmouseout="cambiarColor(this, false)">
+     Pasa el cursor sobre mí
+ </button>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+PT+Guides&display=swap" rel="stylesheet">
@@ -81,5 +104,16 @@
     <footer>
         <p>&copy; 2024 Da² agencia. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        // Función para cambiar el color de fondo del botón
+        function cambiarColor(elemento, esHover) {
+            if (esHover) {
+                elemento.classList.add("boton-hover");
+            } else {
+                elemento.classList.remove("boton-hover");
+            }
+        }
+    </script>
+
 </body>
 </html>
