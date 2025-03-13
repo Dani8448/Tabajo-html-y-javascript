@@ -79,3 +79,68 @@ window.addEventListener('keydown', function(event) {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (event) {
+        let valido = true;
+        let mensajeError = "";
+
+        // Validar nombre
+        const nombre = form.nombre.value.trim();
+        if (nombre.length < 3 || nombre.length > 50) {
+            valido = false;
+            mensajeError += "El nombre debe tener entre 3 y 50 caracteres.\n";
+        }
+
+        // Validar correo electrónico
+        const email = form.email.value.trim();
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            valido = false;
+            mensajeError += "El correo electrónico no es válido.\n";
+        }
+
+        // Validar teléfono
+        const telefono = form.telefono.value.trim();
+        const telefonoRegex = /^\+34 \d{3} \d{3} \d{3}$/;
+        if (!telefonoRegex.test(telefono)) {
+            valido = false;
+            mensajeError += "El formato del teléfono debe ser: +34 123 456 789.\n";
+        }
+
+        // Validar asunto
+        const asunto = form.asunto.value.trim();
+        if (asunto.length < 5 || asunto.length > 100) {
+            valido = false;
+            mensajeError += "El asunto debe tener entre 5 y 100 caracteres.\n";
+        }
+
+        // Validar mensaje
+        const mensaje = form.mensaje.value.trim();
+        if (mensaje.length < 10 || mensaje.length > 500) {
+            valido = false;
+            mensajeError += "El mensaje debe tener entre 10 y 500 caracteres.\n";
+        }
+
+        // Validar edad
+        const edad = parseInt(form.edad.value);
+        if (isNaN(edad) || edad < 18 || edad > 100) {
+            valido = false;
+            mensajeError += "La edad debe estar entre 18 y 100 años.\n";
+        }
+
+        // Validar servicio elegido
+        if (form.servicio.value === "") {
+            valido = false;
+            mensajeError += "Debes seleccionar un servicio.\n";
+        }
+
+        // Si hay errores, cancelar el envío y mostrar alerta
+        if (!valido) {
+            alert(mensajeError);
+            event.preventDefault(); // Evita que el formulario se envíe
+        }
+    });
+});
+
