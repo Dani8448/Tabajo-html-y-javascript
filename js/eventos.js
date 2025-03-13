@@ -14,22 +14,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    
-    let btnVerde = document.getElementById("fondoVerde");
-    let btnAzul = document.getElementById("fondoAzul");
-    let btnReset = document.getElementById("resetFondo");
 
-    
-    btnVerde.addEventListener("click", function() {
-        document.body.style.backgroundColor = "green";
-    });
-
-    btnAzul.addEventListener("click", function() {
-        document.body.style.backgroundColor = "blue";
-    });
-
-    btnReset.addEventListener("click", function() {
-        document.body.style.backgroundColor = ""; 
-    });
-});
