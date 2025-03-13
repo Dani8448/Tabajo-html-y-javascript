@@ -6,7 +6,37 @@
     <title>Agencia de Viajes Fantástica</title>
 </head>
 <body style="background-color: skyblue; font-size: 20px;">
+    <h1>Botones Interactivos</h1>
 
+    <!-- Botones -->
+    <button id="button1">Botón 1</button>
+    <button id="button2">Botón 2</button>
+    <button id="button3">Botón 3</button>
+
+    <script>
+        // Obtener los botones
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const button3 = document.getElementById('button3');
+
+        // Evento para cambiar el fondo cuando el mouse pasa sobre el botón
+        button1.onmouseover = function() {
+            document.body.style.backgroundColor = 'lightblue';
+        };
+        button1.onmouseout = function() {
+            document.body.style.backgroundColor = '';
+        };
+
+        // Evento para doble clic (ondblclick)
+        button2.ondblclick = function() {
+            alert('¡Has hecho doble clic en el Botón 2!');
+        };
+
+        // Evento para cambiar el fondo cuando se hace clic en el botón
+        button3.onclick = function() {
+            document.body.style.backgroundColor = 'lightyellow';
+        };
+    </script>
     <header>
         <a href="../index.html">Volver</a>
         <h2 style="text-decoration: underline; font-size: 35px;">Bienvenidos a la Agencia de Viajes más MÁGICA</h2>
