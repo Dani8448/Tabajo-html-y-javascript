@@ -43,7 +43,7 @@ document.getElementById("textoDinamico").addEventListener("click", function() {
 });
 
 // Crear dinámicamente una lista de elementos
-const listaDeElementos = ['Elemento 1', 'Elemento 2', 'Elemento 3', 'Elemento 4', 'Elemento 5'];
+const listaDeElementos = ['500€', '1000€', '1250€', '1700€', '2000€'];
 
 const ul = document.getElementById('listaGenerada');
 
