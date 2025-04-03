@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Validar correo electrónico
         const email = form.email.value.trim();
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
         if (!emailRegex.test(email)) {
             valido = false;
             mensajeError += "El correo electrónico no es válido.\n";
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Validar teléfono
         const telefono = form.telefono.value.trim();
-        const telefonoRegex = /^\+34 \d{3} \d{3} \d{3}$/;
+        const telefonoRegex = /^(\+34\s?)?\d{3}[-\s]?\d{3}[-\s]?\d{3}$/;
         if (!telefonoRegex.test(telefono)) {
             valido = false;
             mensajeError += "El formato del teléfono debe ser: +34 123 456 789.\n";
@@ -143,4 +143,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.querySelectorAll("button").forEach(boton => {
+    boton.addEventListener("mouseover", function() {
+        this.style.backgroundColor = "gray"; // Color al pasar el ratón
+    });
+
+    boton.addEventListener("mouseout", function() {
+        this.style.backgroundColor = ""; // Vuelve al color original
+    });
+});
+
+
+document.querySelectorAll(".elemento").forEach(item => {
+    item.addEventListener("mouseover", function() {
+        this.style.color = "blue";
+        this.style.fontSize = "20px";
+    });
+
+    item.addEventListener("mouseout", function() {
+        this.style.color = "";
+        this.style.fontSize = "";
+    });
+});
+
 
